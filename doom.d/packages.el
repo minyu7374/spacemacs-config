@@ -19,7 +19,9 @@
 ;; (package! treemacs-evil)
 
 ;; Mac GUI需要单独加载shell变量
-(package! exec-path-from-shell :ignore (not IS-MAC))
+; (package! exec-path-from-shell :ignore (not IS-MAC))
+;; WSL里的emacs daemon 模式下未正常自动加载shell变量
+(package! exec-path-from-shell)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
